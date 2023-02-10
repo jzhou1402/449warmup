@@ -1,2 +1,4 @@
 # Dont need jac ir files etc
 *.jir
+
+tfm_ner_model/

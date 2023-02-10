@@ -162,3 +162,13 @@ Can you confirm your name to be john and your address as 15th and?
 Question (Ctrl-C to exit)> yes
 You are all set for a Tesla test drive!
 Question (Ctrl-C to exit)>
+
+jaseci > walker run talk -ctx "{\"question\": \"I want to schedule a test drive\"}"
+{
+  "success": true,
+  "report": [
+    "To set you up with a test drive, we will need your name and address."
+  ],
+  "final_node": "urn:uuid:c6ef9086-ccea-4588-89ba-5b8af9c40ce2",
+  "yielded": true
+}

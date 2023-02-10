@@ -126,3 +126,18 @@ You can order a Tesla through our design studio.
   "final_node": "urn:uuid:f6d691b8-b714-41fe-aeba-c8a37900344b",
   "yielded": false
 }
+
+jaseci > jac run tfm_ner.jac -walk infer
+Enter input text (Ctrl-C to exit)> my name is john
+[{"entity_text": "john", "entity_value": "name", "conf_score": 0.8965941071510315, "start_pos": 11, "end_pos": 15}]
+Enter input text (Ctrl-C to exit)>
+
+jaseci > jac run dialogue.jac
+2023-02-10 00:54:50,985 - WARNING - add_obj: edge:edge:intent_transition:urn:uuid:97b18de1-bade-42e6-a8d9-d5227aee77f7 is already in node:node:test_drive_state:urn:uuid:42b89285-26f6-403e-a5e8-812e50c26e18's list
+Question (Ctrl-C to exit)> hey I want to schedule a test drive
+To set you up with a test drive, we will need your name and address.
+Question (Ctrl-C to exit)> my name is elon and I live at 123 main street
+Can you confirm your name to be elon and your address as 123 main street?
+Question (Ctrl-C to exit)> yup that is correct
+No worries. We look forward to hearing from you in the future!
+Question (Ctrl-C to exit)>

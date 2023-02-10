@@ -63,3 +63,56 @@ strict digraph root {
     "n1" -> "n2" [ label="e1:intent_transition" ]
     "n1" -> "n3" [ label="e2:intent_transition" ]
 }
+jaseci > jac run dialogue.jac
+> test drive
+Your test drive is scheduled for Jan 1st, 2023.
+{
+  "success": true,
+  "report": [],
+  "final_node": "urn:uuid:c1889316-5983-4dcb-b94d-c330a3d0d4d0",
+  "yielded": false
+}
+jaseci > jac run dialogue.jac
+> order a tesla
+You can order a Tesla through our design studio.
+{
+  "success": true,
+  "report": [],
+  "final_node": "urn:uuid:d7af750e-333e-4411-9314-2cb3124d60b1",
+  "yielded": false
+}
+jaseci > actions load module jac_nlp.bi_enc
+shared model created
+{
+  "success": true
+}
+....
+100%|█████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00,  9.59it/s]
+ 67%|████████████████████████████████████████████████████████▋                            | 2/3 [00:00<00:00,  8.56it/s]
+
+            Epoch : 49
+            loss : 0.0470675528049469
+            LR : 2.1897810218978105e-05
+
+100%|█████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:00<00:00,  9.66it/s]
+ 67%|████████████████████████████████████████████████████████▋                            | 2/3 [00:00<00:00,  8.62it/s]
+
+            Epoch : 50
+            loss : 0.0708061084151268
+            LR : 0.0
+
+Epoch: 100%|█████████████████████████████████████████████████████████████████████████| 50/50 [00:15<00:00,  3.20batch/s]
+{
+  "success": true,
+  "report": [],
+  "final_node": "urn:uuid:05e7e2a0-26bd-4b2c-b0ef-06733cdb8b4a",
+  "yielded": false
+}
+...
+
+jaseci > jac run bi_enc.jac -walk infer -ctx "{\"labels\": [\"test drive\", \"order a tesla\"]}"
+Enter input text (Ctrl-C to exit)> I want to order a tesla
+{"label": "order a tesla", "score": 116.96240680472908}
+Enter input text (Ctrl-C to exit)> I want to test drive
+{"label": "test drive", "score": 122.38136038987507}
+Enter input text (Ctrl-C to exit)>

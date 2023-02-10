@@ -37,3 +37,16 @@ To enable them in other operations, rebuild TensorFlow with the appropriate comp
 {
   "success": true
 }
+jaseci > jac run faq.jac
+2023-02-10 00:25:17,213 - ERROR - rt_error: faq.jac:ingest_faq - line 65, col 28 - rule expr_list - Execption within action call file.load_json! [Errno 2] No such file or directory: 'tesla_faq.json'
+2023-02-10 00:25:17,213 - ERROR - rt_error: faq.jac:ingest_faq - line 65, col 28 - rule expr_list - Internal Exception: [Errno 2] No such file or directory: 'tesla_faq.json'
+jaseci > jac run faq.jac
+> Can I request a Test Drive?
+Yes, you can request for a test drive. Please note that drivers must be a minimum of 25 years of age and not exceeding 65 years of age, hold a full driving license with over 2 years of driving experience. Insurance conditions relating to your specific status must be reviewed and accepted prior to the test drive.
+{
+  "success": true,
+  "report": [],
+  "final_node": "urn:uuid:2095d002-45c3-41d5-9c22-b6a4a7fb624c",
+  "yielded": false
+}
+jaseci >

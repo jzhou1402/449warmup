@@ -116,3 +116,13 @@ Enter input text (Ctrl-C to exit)> I want to order a tesla
 Enter input text (Ctrl-C to exit)> I want to test drive
 {"label": "test drive", "score": 122.38136038987507}
 Enter input text (Ctrl-C to exit)>
+
+jaseci > jac run dialogue.jac
+> yo man, I heard tesla cars are the shit, where can a choom like myself get one of them fine things?
+You can order a Tesla through our design studio.
+{
+  "success": true,
+  "report": [],
+  "final_node": "urn:uuid:f6d691b8-b714-41fe-aeba-c8a37900344b",
+  "yielded": false
+}

@@ -141,3 +141,24 @@ Can you confirm your name to be elon and your address as 123 main street?
 Question (Ctrl-C to exit)> yup that is correct
 No worries. We look forward to hearing from you in the future!
 Question (Ctrl-C to exit)>
+
+PART 6.4
+
+jaseci > jac build main.jac
+2023-02-10 00:59:31,626 - WARNING - rt_warn: faq.jac:main.jac - line 42, col 4 - rule can_stmt - Attempting auto-load for use.qa_classify
+2023-02-10 00:59:31,626 - WARNING - rt_warn: faq.jac:main.jac - line 42, col 4 - rule can_stmt - Builtin action unable to be loaded - use.qa_classify
+Build of main.jir complete!
+
+jaseci > jac run tesla_ai.jir
+2023-02-10 01:02:39,897 - WARNING - add_obj: edge:edge:intent_transition:urn:uuid:17483bf8-242e-4fb4-9d14-83b8d37ca89c is already in node:node:test_drive_state:urn:uuid:81911228-530f-4472-bb96-40a52c6e632e's list
+2023-02-10 01:02:39,898 - ERROR - spawn_architype: tesla_ai.jir: Unable to spawn graph architype faq!
+2023-02-10 01:02:39,898 - ERROR - run_architype: tesla_ai.jir: Unable to spawn architype ['faq', 'graph']!
+2023-02-10 01:02:39,898 - ERROR - rt_error: tesla_ai.jac:blank - line 34, col 73 - rule expression - Incompatible type for object None - NoneType, expecting [<class 'jaseci.graph.node.Node'>, <class 'jaseci.jac.jac_set.JacSet'>]
+2023-02-10 01:02:39,898 - ERROR - rt_error: tesla_ai.jac:blank - line 34, col 0 - rule connect - 'NoneType' object has no attribute 'obj_list'
+Question (Ctrl-C to exit)> hello I would like to order a test drive
+To set you up with a test drive, we will need your name and address.
+Question (Ctrl-C to exit)> my name is john and I live on 15th and main
+Can you confirm your name to be john and your address as 15th and?
+Question (Ctrl-C to exit)> yes
+You are all set for a Tesla test drive!
+Question (Ctrl-C to exit)>

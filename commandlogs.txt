@@ -172,3 +172,34 @@ jaseci > walker run talk -ctx "{\"question\": \"I want to schedule a test drive\
   "final_node": "urn:uuid:c6ef9086-ccea-4588-89ba-5b8af9c40ce2",
   "yielded": true
 }
+
+PART 6.5
+
+jaseci > jac test tests.jac
+2023-02-10 01:09:12,065 - WARNING - add_obj: edge:edge:intent_transition:urn:uuid:ad79f0d8-8318-4945-bc85-6c16d0635a78 is already in node:node:test_drive_state:urn:uuid:872e2728-e89f-41d1-b761-bc0aaf16c21a's list
+2023-02-10 01:09:12,065 - ERROR - spawn_architype: tests.jac: Unable to spawn graph architype faq!
+2023-02-10 01:09:12,065 - ERROR - run_architype: tests.jac: Unable to spawn architype ['faq', 'graph']!
+2023-02-10 01:09:12,065 - ERROR - rt_error: tesla_ai.jac:blank - line 34, col 73 - rule expression - Incompatible type for object None - NoneType, expecting [<class 'jaseci.graph.node.Node'>, <class 'jaseci.jac.jac_set.JacSet'>]
+2023-02-10 01:09:12,065 - ERROR - rt_error: tesla_ai.jac:blank - line 34, col 0 - rule connect - 'NoneType' object has no attribute 'obj_list'
+Testing testing the Tesla conv AI system: [PASSED in 0.04s]
+{
+  "tests": 1,
+  "passed": 1,
+  "failed": 0,
+  "success": true
+}
+jaseci >
+
+System check identified no issues (0 silenced).
+February 10, 2023 - 06:11:27
+Django version 3.2.17, using settings 'jaseci_serv.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+jaseci > login http://localhost:8000/
+Username: admin@j.org
+Password:
+Token: 8a2d6f301c0d5eef657e24a85f3aaf636f82642dba0d196830aa8f7a5e3fc133
+Login successful!
+@jaseci >
+
